@@ -1,31 +1,43 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
 
- // TODO: Create an array of questions for user input
-// const questions = [];
-
-// TODO: Create a function to write README file
+// Readme generatoring information
 const readMeSkeleton = (resp) => 
 `# ${resp.title}
 ## Description
 * ${resp.description}
+
+## Table of Contents
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Credits](#Credits)
+5. [Test](#Test)
+6. [Questions](#Questions)
+
 ## Installation 
 * ${resp.installation}
+
 ## Usage
 * ${resp.usage}
+
 ## License
 * ${resp.license}
+
 ## Credits
 * ${resp.credit}
+
 ## Test
 * ${resp.test}
+
 ## Questions
 * If you have questions you can check https://github.com/${resp.questions} or contact me at ${resp.email}
 `
 
 // TODO: Create a function to initialize app
 function init() {
+    // prompts for using input
     inquirer.prompt([
         {
             name: 'title',
@@ -50,12 +62,20 @@ function init() {
              name: 'license',
              type: 'list',
              message: 'License for this project?',
-            choices: ['option1' , 'option2' , 'option3' , 'option4'  ]
+            choices: [
+                        'MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)' ,
+
+                        'Mozilla [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)' ,
+
+                        'Apache [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)' ,
+
+                        'ISC [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
+            ]
          },
         {
             name: 'credit',
             type: 'input',
-            message: 'How you can contribute to this application?'
+            message: 'Who can contribute to this application?'
         },
         {
             name: 'test',
@@ -82,5 +102,5 @@ function init() {
     })
 }
 
-// Function call to initialize app
+// call function
 init();
