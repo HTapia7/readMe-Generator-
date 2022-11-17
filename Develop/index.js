@@ -35,7 +35,7 @@ const readMeSkeleton = (resp) =>
 * If you have questions you can check https://github.com/${resp.questions} or contact me at ${resp.email}
 `
 
-// TODO: Create a function to initialize app
+// function init 
 function init() {
     // prompts for using input
     inquirer.prompt([
