@@ -11,7 +11,11 @@ https://github.com/HTapia7/readMe-Generator-
 - node 
 - GitHub repo 
 
+## Technologies 
+
+* npm
+* jQuery
+* JavaScript 
+
 ## Usage 
 - Fast way to create readme
-
-## 
